@@ -1,6 +1,7 @@
 package com.yangdingshan.solution143;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -26,7 +27,21 @@ public class Solution {
             System.out.println(node1.val);
             node1 = node1.next;
         }
+        System.out.println(solution.parse("123"));
 
+    }
+
+    public int parse(String s) {
+        int i = 0, len = s.length();
+        int result = 0;
+        while (i < len) {
+            // int digit = s.charAt(i) - '0';
+            int digit = Character.digit(s.charAt(i), 10);
+            result *= 10;
+            result -= digit;
+            i++;
+        }
+        return -result;
     }
 
     public void reorderList2(ListNode head) {
