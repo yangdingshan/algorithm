@@ -28,6 +28,7 @@ public class Solution {
         Queue<Integer> depth = new LinkedList<Integer>();
         Map<Integer, Integer> rightValue = new HashMap<Integer, Integer>(16);
         offer.offer(root);
+        // test
         depth.offer(0);
         while (!offer.isEmpty()) {
             TreeNode node = offer.poll();
